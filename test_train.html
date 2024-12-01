@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Node Creation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+    }
+
+   
+    .line {
+      position: absolute;
+      background-color: black;
+      height: 2px;
+      transform-origin: top left;
+    }
+    .button-group {
+      margin: 10px 0;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    .container {
+  position: relative;
+  width: 1200px;
+  height: 600px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.circle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+}
+
+.train {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+
+
+
+  </style>
+</head>
+<body>
+  <h1>Dynamic Node Creation</h1>
+  <div class="button-group">
+    <button id="create-right">Create Node to Right</button>
+    <button id="create-left">Create Node to Left</button>
+  </div>
+  <div class="container" id="canvas">
+    <div class="circle" id="A" style="left: 100px; top: 250px;">A</div>
+  </div>
+  <div class="button-group" id="dynamic-buttons"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
